@@ -48,7 +48,7 @@ class newuser
         return $result; 
     }
 
-    public function valid($name, $email, $pass, $povtpass)
+    private function valid($name, $email, $pass, $povtpass)
     {
         if(!empty($name) && !empty($email) && !empty($pass))
     {

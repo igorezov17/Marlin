@@ -5,7 +5,7 @@ require_once "/db/db.php";
 function newUser($name, $email, $pass, $povtpass)
 {
             $res = valid($name, $email, $pass, $povtpass);
-            if ($res = true)
+            if ($res == true)
             {
                 $pdo = new PDO("mysql:host=localhost;dbname=test", "root", "");
                 $stmf = $pdo->prepare('SELECT email FROM users WHERE email = :email');
@@ -76,4 +76,13 @@ function debug($obt)
     echo "<pre>";
     print_r($obt);
     echo "</pre>";
+    die;
+    
 }
+
+function connectToDB()
+{
+    $pdo = new PDO("mysql:host=localhost;dbname=test", "root", "");
+    return $pdo;
+}
+

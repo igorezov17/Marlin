@@ -1,7 +1,5 @@
 <?php
 
-//require_once 'test_db.php';
-
 $driver = 'mysql';
 $host = '127.0.0.1';
 $dbname = 'test';
@@ -18,9 +16,6 @@ try {
     $dsn = "$driver:host=$host;dbname=$dbname;charset=$charset";
 
     $pdo = new PDO($dsn, $dbuser, $pass, $options);
-    //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-
-
 } catch (PDOException $e) {
     exit ($e->getMessage());
 }
