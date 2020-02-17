@@ -80,9 +80,4 @@ function debug($obt)
     
 }
 
-function connectToDB()
-{
-    $pdo = new PDO("mysql:host=localhost;dbname=test", "root", "");
-    return $pdo;
-}
 
