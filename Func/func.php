@@ -74,7 +74,7 @@ function flash($obt)
 function debug($obt)
 {
     echo "<pre>";
-    print_r($obt);
+    var_dump($obt);
     echo "</pre>";
     die;
     
