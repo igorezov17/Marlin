@@ -1,6 +1,6 @@
 <?php
 
-require_once "/db/db.php";
+/*require_once "/db/db.php";
 
 function newUser($name, $email, $pass, $povtpass)
 {
@@ -69,12 +69,12 @@ function flash($obt)
         $res = $obt;
     }
     return $res;
-}
+}*/
 
 function debug($obt)
 {
     echo "<pre>";
-    var_dump($obt);
+    print_r($obt);
     echo "</pre>";
     die;
     

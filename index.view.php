@@ -36,7 +36,7 @@
                     <tr>
                     <th scope="col">№</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Comment</th>
+                    <!--<th scope="col">Comment</th>-->
                     <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -44,15 +44,11 @@
                     <tbody>
                         <tr>
                         <th scope="row"><?php echo $com['id']; ?></th>
-                        <td><?php echo $com['name']; ?></td>
-                        <td><?php echo $com['describes']; ?></td>
+                        <td><a href="show.php?id=<?php echo $com['id']; ?>"><?php echo $com['name']; ?></a></td>
+                        <!--<td><?php //echo $com['describes']; ?></td>-->
                         <td>
-                    
-                                <button type="submit" class="btn btn-warning">Edit</button>
-                            
-                            
+                                <a href="edit.php?id=<?php echo $com['id']; ?>" class="btn btn-warning">Edit</a>
                                 <button type="submit" class="btn btn-danger">Delete</button>
-                            
                         </td>
                         </tr>
                     </tbody>

@@ -26,6 +26,16 @@ class QueryBuilder{
         $stmt->execute($data);
     }
 
+    public function getOne($table, $id)
+    {
+        $sql = "SELECT * FROM {$table} WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
 }
 
 ?>

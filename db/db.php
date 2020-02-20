@@ -8,9 +8,7 @@ $pass = '';
 $charset = 'utf8';
 $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
-/*$dsn = "$driver:host=$host;dbname=$dbname;charset=$charset";
 
-$pdo = new PDO($dsn, $dbuser, $pass, $options);*/
 
 try {
     $dsn = "$driver:host=$host;dbname=$dbname;charset=$charset";
