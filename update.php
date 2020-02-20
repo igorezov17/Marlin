@@ -1,5 +1,8 @@
-
 <?php
 include "func/func.php";
-debug($_POST);
+$db = include "db/start.php";
+$db->update('task', $_POST, $_GET['id']);
+header('Location:index.php');
+
 ?>
+

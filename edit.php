@@ -2,7 +2,6 @@
 include "func/func.php";
 $db = include "db/start.php";
 $post = $db->getOne('task', $_GET['id']);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,15 +15,16 @@ $post = $db->getOne('task', $_GET['id']);
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <form action="update.php?id = <?php ['id'];?>" method="POST">
+                        <form action="/update.php?id=<?php echo $post['id']; ?>" method="POST">
                             <h2>Edit</h2>
-                            <input type="hidden" value="<?php echo $post['id'] ?>" name="id">
+                            
                             <label for="">Title</label>
-                            <input type="text" name="title" class="form-control">
+                            <input type="text" name="name" class="form-control">
                             <label for="">Content</label>
-                            <input type="text" name="content" class="form-control">
+                            <input type="text" name="describes" class="form-control">
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-success">Изменить</button>
+                                    <a href="index.php" class="btn btn-info">Назад</a>
                                 </div>
                         </form>
                     </div>

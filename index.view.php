@@ -48,7 +48,7 @@
                         <!--<td><?php //echo $com['describes']; ?></td>-->
                         <td>
                                 <a href="edit.php?id=<?php echo $com['id']; ?>" class="btn btn-warning">Edit</a>
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <a href="delete.php?id=<?php echo $com['id']; ?>" class="btn btn-danger" onclick="return confirm('А вы уверены')">Delete</a>
                         </td>
                         </tr>
                     </tbody>
