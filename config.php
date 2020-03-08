@@ -1,7 +1,7 @@
 <?php
 
 return [
-     "database" => [
+     "database1" => [
          "database" => "test",
          "charset" => "utf8",
          "username" => "root",
@@ -14,7 +14,15 @@ return [
         "username" => "root",
         "password" => "",
         "connection" => "mysql:host=localhost"
+    ],
+    "database3" => [
+        "connection" => "mysql:host=localhost",
+        "dbname" => "university",
+        "username" => "root",
+        "password" => "",
+        "charset" => "utf8"
     ]
+
 ]
 
 ?>
